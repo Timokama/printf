@@ -7,7 +7,7 @@
  * @args: A list of variadic arguments
  * Return:The length of the format
  */
-int _ptintt_format(const char *format, va_list args)
+int _print_format(const char *format, va_list args)
 {
 	int count = 0;
 	int i = 0;

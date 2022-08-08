@@ -7,10 +7,10 @@
  */
 int main(void)
 {
-	_print("%s\n", "Best\nSchool");
+	_printf("%s\n", "Best\nSchool");
 	return (0);
 }
-void _print(unsigned int n, ...)
+void _printf(unsigned int n, ...)
 {
 	va_list args;
 	unsigned int i = 0;

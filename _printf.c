@@ -12,8 +12,8 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int length = 0;
-	
+	unsigned int length = 0;
+
 	if (format == NULL)
 	{
 		return (-1);

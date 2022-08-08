@@ -1,14 +1,13 @@
-#include  <stdlib.h>
 #include "main.h"
-#include <stdarg.h>
+#include <stdlib.h>
+
 /**
- * _print_format - printf a format
- * @format: The format to prints
+ * _print_format - prints a format
+ * @format: The format to print
  * @args: A list of variadic arguments
- *
- * Return: The length of the format
+ * Return:The length of the format
  */
-int _print_format(const char *format, va_list args)
+int _ptintt_format(const char *format, va_list args)
 {
 	int count = 0;
 	int i = 0;
@@ -34,7 +33,9 @@ int _print_format(const char *format, va_list args)
 			}
 		}
 		else
+		{
 			count += _write(format[i]);
+		}
 		i++;
 	}
 	return (count);
@@ -43,7 +44,6 @@ int _print_format(const char *format, va_list args)
  * _print_spec - Prints a valid specifier
  * @format: The specifier to prints
  * @args: A list of variadic arguments
- *
  * Return: The length of the specifier
  */
 int _print_spec(char format, va_list args)
@@ -60,17 +60,17 @@ int _print_spec(char format, va_list args)
 	while (_types[i].specifier)
 	{
 		if (*_types[i].specifier == format)
-		length = _types[i].f(args);
+			length = _types[i].f(args);
 		i++;
 	}
 	return (length);
 }
 /**
- * _print_invalid_spec - prints an invalid specifier
+ * _print_invalid_spec - ... invalid specifier
  * @prev_format: The previous specifier of actual specifier
- * @format: The current count before prints invalid specifiers
- *
- * Return: The current count after prints invalid specifiers
+ * @format: The specifier to prints
+ * @count: The current count before prints invalid specifiers
+ * Return: The current count before prints invalid specifiers
  */
 int _print_invalid_spec(char prev_format, char format, int count)
 {

@@ -1,10 +1,9 @@
 #include "main.h"
-#include <stdlib.h>
+#include <stdlib>
 #include <stdio.h>
 /**
  * _print_a_char - ...
  * @args: A list of variadic arguments
- *
  * Return: The length of the character
  */
 int _print_a_char(va_list args)
@@ -15,7 +14,6 @@ int _print_a_char(va_list args)
 /**
  * _print_a_string - ...
  * @args: A list of variadic arguments
- *
  * Return: The length of the string
  */
 int _print_a_string(va_list args)
@@ -43,7 +41,6 @@ int _print_a_string(va_list args)
 /**
  * _print_a_integer - ...
  * @args: A list of variadic arguments
- *
  * Return: length of the string
  */
 int _print_a_integer(va_list args)
@@ -71,13 +68,12 @@ int _print_a_integer(va_list args)
 /**
  * _recursion_integer - prints integer
  * @a: integer to print
- *
  * Return: Nothing
  */
 void _recursion_integer(int a)
 {
 	unsigned int i;
-	
+
 	i = a;
 	if (i / 10)
 		_recursion_integer(i / 10);

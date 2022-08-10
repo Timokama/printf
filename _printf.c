@@ -6,7 +6,6 @@
 /**
  * _printf -function my printf
  * @format: string with format to print
- *
  * Return: number of chars that print
  */
 int _printf(const char *format, ...)
